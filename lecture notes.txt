@@ -1,0 +1,20 @@
+index has tf
+find cf (collection frequency) by summing all the tf's for each document in the index
+while finding cf - you can find df (no documents containing the term) by counting the 	documents finding cf
+
+
+tfidf = idea that less common words like 'elephant' rather than 'the' are more useful for finding relevant documents.
+
+DF distinguishes relevant words - not CF
+Informative words are inversly related to the document frequency - i.e. 'the' appears in 99.9% of documents and isnt very useful BUT 'elephant' appears in 2% of documents and is very informative.
+
+|D|/dfw = inverse document frequency # take log to moderate
+>> the value == more relavant i.e. idf(try) = 0.057 // idf(mischief) = 1.456
+
+you need to do:
+tf.log(|D|/dfw)
+BUT not all terms descrive a document equally well so we bring tf back in
+
+
+tf = 1
+3204 / 117

@@ -1,0 +1,24 @@
+python ir_engine.py -w binary -o results/binary.txt
+python ir_engine.py -w tf -o results/tf.txt
+python ir_engine.py -w tfidf -o results/tfidf.txt
+python ir_engine.py -w binary -o results/binary_s.txt -s
+python ir_engine.py -w tf -o results/tf_s.txt -s
+python ir_engine.py -w tfidf -o results/tfidf_s.txt -s
+python ir_engine.py -w binary -o results/binary_p.txt -p
+python ir_engine.py -w tf -o results/tf_p.txt -p
+python ir_engine.py -w tfidf -o results/tfidf_p.txt -p
+python ir_engine.py -w binary -o results/binary_sp.txt -p -s
+python ir_engine.py -w tf -o results/tf_sp.txt -p -s
+python ir_engine.py -w tfidf -o results/tfidf_sp.txt -p -s
+python eval_ir.py cacm_gold_std.txt results/binary.txt
+python eval_ir.py cacm_gold_std.txt results/binary_s.txt
+python eval_ir.py cacm_gold_std.txt results/binary_p.txt
+python eval_ir.py cacm_gold_std.txt results/binary_sp.txt
+python eval_ir.py cacm_gold_std.txt results/tf.txt
+python eval_ir.py cacm_gold_std.txt results/tf_s.txt
+python eval_ir.py cacm_gold_std.txt results/tf_p.txt
+python eval_ir.py cacm_gold_std.txt results/tf_sp.txt
+python eval_ir.py cacm_gold_std.txt results/tfidf.txt
+python eval_ir.py cacm_gold_std.txt results/tfidf_s.txt
+python eval_ir.py cacm_gold_std.txt results/tfidf_p.txt
+python eval_ir.py cacm_gold_std.txt results/tfidf_sp.txt
